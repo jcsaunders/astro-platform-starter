@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+
+const explainer = `
+It’s becoming super popular to ‘decouple’ your CMS from your frontend implementation. The approach brings a lot of benefits: we can access our content on more platforms, we can replace the backend and re-expose the same endpoints so our frontend still works, we can scale etc.
+
+I wanted to use my favourite CMS, Kirby, to provide content whilst I am trying to learn some React.
+
+I love Kirby (no, they don’t pay me to say that!), everything I want, it just seems to already do or it’s super easy to get it done yourself.
+`;
+---
+
+<Layout title="About">
+    <ContextAlert class="mb-4" />
+    <h1 class="mb-10">About</h1>
+    <Markdown content={explainer} class="text-lg mb-10" />
+    <p class="mb-8">
+        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
+    </p>
+</Layout>
